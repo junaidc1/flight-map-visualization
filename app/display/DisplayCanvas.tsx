@@ -357,6 +357,22 @@ export default function DisplayCanvas() {
       <div className="absolute inset-x-0 bottom-0 flex justify-center pb-10">
         <CityInput onSubmit={handleSubmit} excludeKey={DESTINATION.cityKey} />
       </div>
+
+      {/* Sits in the strip below the input panel's bottom edge rather than
+          beside it, so the two can't collide on a narrow screen. The wrapper
+          ignores pointer events so it never swallows a drag on the map; only
+          the link itself is clickable. */}
+      <p className="pointer-events-none absolute right-6 bottom-4 font-mono text-[11px] tracking-wide text-white/25">
+        © 2026 JOONS Studio{' | '}
+        <a
+          href="https://joons.studio"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="pointer-events-auto underline decoration-white/20 underline-offset-2 transition hover:text-amber-200 hover:decoration-amber-200/50"
+        >
+          joons.studio
+        </a>
+      </p>
     </div>
   );
 }
