@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Flight Routes",
+  title: "JOONS Studio | Flight Route Animation",
   description: "Live flight-route projection installation",
 };
 
