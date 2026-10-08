@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // The dev-tools badge sits in the corner of the projected map.
+  devIndicators: false,
   cacheComponents: true,
   partialPrefetching: true,
   turbopack: {
