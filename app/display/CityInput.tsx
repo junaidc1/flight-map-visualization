@@ -72,7 +72,7 @@ export default function CityInput({
     return (
       <Panel>
         <div className="px-7 py-6 text-center">
-          <p className="text-xs tracking-[0.25em] text-amber-200/85 uppercase">
+          <p className="text-xs tracking-[0.25em] text-[#a4ebff]/85 uppercase">
             Now boarding
           </p>
           <p className="mt-2 text-2xl font-medium text-white">
@@ -102,7 +102,7 @@ export default function CityInput({
                 }}
                 onMouseEnter={() => setHighlight(index)}
                 className={`flex w-full items-baseline justify-between gap-4 px-7 py-3.5 text-left transition ${
-                  index === highlight ? 'bg-amber-300/25' : 'hover:bg-white/10'
+                  index === highlight ? 'bg-[#a4ebff]/25' : 'hover:bg-white/10'
                 }`}
               >
                 <span className="text-lg text-white">{city.cityName}</span>
@@ -118,7 +118,7 @@ export default function CityInput({
       <div className="px-7 py-5">
         <label
           htmlFor="city"
-          className="block text-xs tracking-[0.25em] text-amber-200/75 uppercase"
+          className="block text-xs tracking-[0.25em] text-[#a4ebff]/75 uppercase"
         >
           Where are you flying in from?
         </label>
@@ -151,7 +151,7 @@ export default function CityInput({
 
 function Panel({ children }: { children: React.ReactNode }) {
   return (
-    <div className="w-[min(34rem,calc(100vw-3rem))] overflow-hidden rounded-2xl border border-amber-200/25 bg-[#0c1423]/95 shadow-2xl shadow-black/70 backdrop-blur-md transition-colors focus-within:border-amber-200/50">
+    <div className="w-[min(34rem,calc(100vw-3rem))] overflow-hidden rounded-2xl border border-[#a4ebff]/25 bg-[#0c1423]/95 shadow-2xl shadow-black/70 backdrop-blur-md transition-colors focus-within:border-[#a4ebff]/50">
       {children}
     </div>
   );

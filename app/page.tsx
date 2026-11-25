@@ -13,7 +13,7 @@ export default function Home() {
         <li>
           <Link
             href="/display"
-            className="text-amber-300 underline decoration-amber-300/30 underline-offset-4 hover:decoration-amber-300"
+            className="text-[#a4ebff] underline decoration-[#a4ebff]/30 underline-offset-4 hover:decoration-[#a4ebff]"
           >
             /display
           </Link>

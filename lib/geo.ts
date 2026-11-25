@@ -19,9 +19,10 @@ export function shortestLongitudeDelta(from: number, to: number): number {
 }
 
 /**
- * Midpoint of the great circle between two points. Averaging lat/lng directly
- * would land in the wrong place for long or high-latitude routes, so this
- * averages the 3D unit vectors instead.
+ * Midpoint of the great circle between two points - the point to centre the
+ * globe on so the whole flight path is in frame. Averaging lat/lng directly
+ * would put the camera in the wrong place for long or high-latitude routes,
+ * so this averages the 3D unit vectors instead.
  */
 export function greatCircleMidpoint(a: LatLng, b: LatLng): LatLng {
   const lat1 = toRadians(a.lat);
@@ -62,5 +63,3 @@ export function angularDistance(a: LatLng, b: LatLng): number {
 export function easeInOutCubic(t: number): number {
   return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 }
-
-

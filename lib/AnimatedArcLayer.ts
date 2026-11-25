@@ -79,11 +79,11 @@ export default class AnimatedArcLayer<DataT = unknown> extends ArcLayer<
     getStartTime: { type: 'accessor', value: 0 },
     drawDurationMs: { type: 'number', value: 2600 },
     /**
-     * An arc is a triangle strip whose winding depends on which way it
-     * travels, so under back-face culling it doesn't degrade - it disappears
-     * outright, with no error and no warning. A flat MapView doesn't cull, so
-     * this is a no-op here; it is kept so the layer stays safe to drop into a
-     * GlobeView, which does.
+     * GlobeView turns on back-face culling so the far side of the sphere is
+     * hidden. An arc is a triangle strip whose winding depends on which way it
+     * travels, so a culled arc doesn't degrade - it disappears outright, with
+     * no error and no warning. Disabling culling for this layer only keeps the
+     * globe's own occlusion (which comes from the depth test) intact.
      */
     parameters: { cullMode: 'none' as const },
   };
